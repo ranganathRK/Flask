@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+	<title>Add Images</title>
+
+	<!-- bootstracp core css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename = 'bootstrap.min.css')}}">
+</head>
+	<body>
+		<div style="color: black;background-color: #80ced6" class="jumbotron">
+				<h1>Image Upload</h1>
+		</div>
+		<br>
+		<div class="container">
+			<form id="/upload" action="http://localhost:5000/upload" enctype="multipart/form-data" method="POST">
+				<div class="form-group">
+					<label>
+				      <input type="file" name="file" id="file" onchange="document.getElementById('file').click()" />
+				    </label>
+				</div>
+				<div class="form-group">
+					<label for="category">Choose Image Category:</label>
+					<select name="category" id="category">
+					  <option value="dog">Dog</option>
+					  <option value="fish">Fish</option>
+					  <option value="bird">Bird</option>
+					</select>
+				</div>
+				<button class = "btn btn-lg btn-primary btn-block" type="submit">upload</button> 
+			</form>
+		</div>
+	</body>
+</html>
+
+
